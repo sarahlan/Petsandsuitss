@@ -1,0 +1,13 @@
+ background color E8EDC3 
+Font color 250A66
+Header and Footer color 9FAD8C
+
+ media="screen"
+
+
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" 
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+           <a class="navbar-brand" href="#"></a>
