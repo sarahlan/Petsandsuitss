@@ -11,22 +11,34 @@ h1 {
     color: rgb(15, 15, 90);
  }
 
- 
 
 
 .nav-link{
     color: #250A66;
     font-family: 'Reenie Beanie', cursive;
     font-size: 30px;
-    margin-left: 40px;
 }
+
+ul {
+  padding: 15px;
+} 
 
 .nav-link:hover{
     color:#9AC2C5;
     color:rgb(105, 114, 187);
 }
 
+.navbar-nav{
+  margin-left:90px ;
+}
 
+.nav-item-2{
+  margin-left: 800px;
+}
+
+.fab{
+  font-size: xx-large;
+}
 
 * {box-sizing: border-box}
 body {font-family: Verdana, sans-serif; margin:0}
