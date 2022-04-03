@@ -8,26 +8,20 @@
     <title>Document</title>
 </head>
 <body>
-<a href= "index.html">;
-<?php
 
-    //string
-    $name = 'coding is fun';
+      <?php
 
-    //integer
-    $name = 20;
-
-     //float
-    $name = 20.5784;
-
-    //boolean
+    $x = 2;
+    if ($x == 1){
+        echo "Daniel is very handsome!";
+    }
+    else {
+        "Daniel is very ugly";
+    }
 
 
-    //array
-    $names = array("Sarah","Cody","Hadley","Ashlyn","Cade");
-    echo $names ['0']
 
+      ?>
 
-?>
 </body>
 </html>
