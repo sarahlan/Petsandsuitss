@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b6acd16b3.js" crossorigin="anonymous"></script>
-    
+    <a href= "array.php">;
+    <a href= "switch.php">;
     <title>Document</title>
   </head>
 
@@ -54,6 +55,7 @@
       </nav>
 
 <!------End of Navbar-->
+
 
 
 <!-----Carousel------->
