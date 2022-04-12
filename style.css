@@ -12,13 +12,19 @@ h1 {
  }
 
 
+
+
+
+
+
 /*------Navbar-------*/
 
 .nav-link{
     color: #250A66;
     font-family: 'Reenie Beanie', cursive;
-    font-size: 30px;
-    margin-right: 30px;
+    font-size: 40px;
+    text-align:left;
+    margin-right: 10px;
 }
 
 .nav-link:hover{
@@ -27,15 +33,57 @@ h1 {
 }
 
 .navbar-nav{
-  margin-left:120px ;
-  padding:12px;
+padding-left:600px;
+text-align: center;
 }
 
-.nav-item-2{
-  margin-left: 800px;
+.nav-item {
+  padding: 10px;
+}
+
+.nav-item-sign{
+  padding-left: 20px
+}
+
+.nav-link-2 {
+  color: #250A66;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 39px;
+    text-align:left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.or {
+  color: #250A66;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 39px;
+    text-align:left;
+    margin-right: 10px;
+
+}
+.nav-link-3  {
+  color: #250A66;
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 39px;
+    text-align:left;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.nav-link-2:hover{
+  color:#9AC2C5;
+  color:rgb(105, 114, 187);
+}
+.nav-link-3:hover{
+  color:#9AC2C5;
+  color:rgb(105, 114, 187);
 }
 
 /*------End of Navbar-------*/
+
+
+
+
 
 
 

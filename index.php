@@ -30,9 +30,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <li class="nav-item-dropdown">
+                <a class="nav-link dropdown-toggler" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Products
+                  <i class="fa-solid fa-angle-down">
+                  </i>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">Dawg</a></li>
@@ -41,8 +43,10 @@
                   <li><a class="dropdown-item" href="#">Fizh</a></li>
                   <li><a class="dropdown-item" href="#">Monke</a></li>
                 </ul>
-                <li class="nav-item-2">
-                  <a class="nav-link" href="#">Sign Up</a>
+                <li class="nav-item-sign">
+                  <a class="nav-link-2" href="#">Sign Up</a>
+                  <p class="or"> or </p>
+                  <a class="nav-link-3" href="#">Sign In!</a>
                 </li>
             </ul>
           </div>
