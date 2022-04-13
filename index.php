@@ -12,16 +12,13 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b6acd16b3.js" crossorigin="anonymous"></script>
-    <a href= "array.php">;
-    <a href= "switch.php">;
     <title>Document</title>
   </head>
 
 <body>
 
-    <!----------Navbar----------->
-
-    <nav class="navbar navbar-expand-lg" style="background-color: #E8EDC3;">
+<!----------Navbar----------->
+    <nav class="navbar navbar-expand-lg" style="background-color:#E8EDC3;">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -31,12 +28,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-              <li class="nav-item-dropdown">
-                <a class="nav-link dropdown-toggler" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Products
-                  <i class="fa-solid fa-angle-down">
-                  </i>
-                </a>
+
+<!----------Dropdown----------->
+              <li class="nav-link nav-item-dropdown">
+                <a class="nav-link fa-solid fa-arrow-down-long dropdown-toggler" href="#" id="navbarDropdownMenuLink" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false"> Products </a>
+                </li>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">Dawg</a></li>
                   <li><a class="dropdown-item" href="#">Cad</a></li>
@@ -44,78 +41,31 @@
                   <li><a class="dropdown-item" href="#">Fizh</a></li>
                   <li><a class="dropdown-item" href="#">Monke</a></li>
                 </ul>
-                <li class="nav-item-sign">
-                  <a class="nav-link-2" href="#">Sign Up</a>
+
+
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-2" href="#">Sign Up!</a>
+                </li>
                   <p class="or"> or </p>
-                  <a class="nav-link-3" href="#">Sign In!</a>
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-3" href="#">Sign In!</a>
+                  </li>
                 </li>
             </ul>
           </div>
         </div>
       </nav>
 
-<!------End of Navbar-->
+<!------End of Navbar------------------>
 
 
 
-<!-----Carousel------->
-
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <img src="images/grouppic.png" style="width:100%" >
-    <div class="text"></div>
+<!-----Card------->
+<div class="card">
+  <img src="grouppic.png" class="card-img-top" alt="...">
+  <div class="card-body">
   </div>
-  
-  <div class="mySlides fade">
-    <img src="images/robocat.png" style="width:100%">
-  </div>
-  
-  <div class="mySlides fade">
-    <img src="images/BUNNYINTHEPARK.png" style="width:100%">
-  </div>
-  
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-  </div>
-
-  <br>
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-  </div>
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-    </script>
-    
-<!--------End of Carousel------>
+</div>
 
 
 
@@ -147,6 +97,7 @@
     </div>
   </div>
 </div>
+
 
 <footer class="footer mt-auto py-3 by-dark ">
 <!-- Footer -->

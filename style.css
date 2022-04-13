@@ -1,40 +1,7 @@
-h1 {
-    background-color: #E8EDC3;
-}
-
-h1 {
-    color: red;
-    margin-left: 20px;
- }
- 
- p {
-    color: rgb(15, 15, 90);
- }
-
-
-
-
-
-
 
 /*------Navbar-------*/
-
-.nav-link{
-    color: #250A66;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 40px;
-    text-align:left;
-    margin-right: 10px;
-}
-
-.nav-link:hover{
-    color:#9AC2C5;
-    color:rgb(105, 114, 187);
-}
-
 .navbar-nav{
-padding-left:600px;
-text-align: center;
+  padding: 10px;
 }
 
 .nav-item {
@@ -42,41 +9,36 @@ text-align: center;
 }
 
 .nav-item-sign{
-  padding-left: 20px
+  padding: 10px;
 }
 
-.nav-link-2 {
-  color: #250A66;
+.nav-link 
+.nav-link-2
+.nav-link-3{
+    color: #250A66;
     font-family: 'Reenie Beanie', cursive;
-    font-size: 39px;
+    font-size: 40px;
     text-align:left;
     margin-right: 10px;
-    text-decoration: none;
+}
+
+.nav-link:hover
+.nav-link-2:hover
+.nav-link-3:hover{
+    color:#9AC2C5;
+    color:rgb(105, 114, 187);
 }
 
 .or {
   color: #250A66;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 39px;
-    text-align:left;
-    margin-right: 10px;
-
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 29px;
+  text-align:left;
+  margin-right: 10px;
 }
-.nav-link-3  {
+.dropdown-toggler {  
+  padding: 10px;
   color: #250A66;
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 39px;
-    text-align:left;
-    margin-right: 10px;
-    text-decoration: none;
-}
-.nav-link-2:hover{
-  color:#9AC2C5;
-  color:rgb(105, 114, 187);
-}
-.nav-link-3:hover{
-  color:#9AC2C5;
-  color:rgb(105, 114, 187);
 }
 
 /*------End of Navbar-------*/
@@ -87,81 +49,6 @@ text-align: center;
 
 
 
-/*-------Carousel------*/
-
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    animation:infinite;
-  }
-  
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: #E8EDC3 ;
-    font-weight: bold;
-    font-size: 20px;
-    transition:all;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: #9AC2C5;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 1.5s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color:rgb(105, 114, 187);
-  }
-  
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 2.5;
-    animation-name: fade;
-    animation-duration: 2.5;
-  }
-  
-  @-webkit-keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
-  
-  /* Responsiveness*/
-  @media only screen and (max-width: 300px){
-    .prev .next{
-        font-size:11px;}
-    } 
 
 /*-------Footer------*/
 
