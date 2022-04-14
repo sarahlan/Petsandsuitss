@@ -1,5 +1,6 @@
 
 /*------Navbar-------*/
+
 .navbar-nav{
   padding: 10px;
 }
@@ -36,13 +37,26 @@
   text-align:left;
   margin-right: 10px;
 }
+
 .dropdown-toggler {  
   padding: 10px;
   color: #250A66;
 }
 
+#navbarNavDropdown {
+  display:inline-block;
+}
+#arrow-down ~ span {
+  display:inline-block;
+}
+
 /*------End of Navbar-------*/
 
+.jumbotron-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 

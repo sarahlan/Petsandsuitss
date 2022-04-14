@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b6acd16b3.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Documents</title>
   </head>
 
 <body>
@@ -30,9 +30,14 @@
               </li>
 
 <!----------Dropdown----------->
+            <div class= "dropdown">
+              <ul class= "dropdown-arrow-down">
               <li class="nav-link nav-item-dropdown">
-                <a class="nav-link fa-solid fa-arrow-down-long dropdown-toggler" href="#" id="navbarDropdownMenuLink" role="button" 
-                data-bs-toggle="dropdown" aria-expanded="false"> Products </a>
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
+                <span> Products </span>
+                </a>
                 </li>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">Dawg</a></li>
@@ -41,12 +46,17 @@
                   <li><a class="dropdown-item" href="#">Fizh</a></li>
                   <li><a class="dropdown-item" href="#">Monke</a></li>
                 </ul>
+                </ul>
+                </div>
 
-
+<!-------------------Sign in-------------->
                 <li class="nav-item nav-item-sign">
                   <a class="nav-link nav-item-2" href="#">Sign Up!</a>
                 </li>
+
                   <p class="or"> or </p>
+
+<!------------------Sign up-------------->                  
                 <li class="nav-item nav-item-sign">
                   <a class="nav-link nav-item-3" href="#">Sign In!</a>
                   </li>
@@ -58,14 +68,17 @@
 
 <!------End of Navbar------------------>
 
-
-
-<!-----Card------->
-<div class="card">
-  <img src="grouppic.png" class="card-img-top" alt="...">
-  <div class="card-body">
+<div class="container py-5">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: C:\Users\Sarah.Lancaster\Documents\GitHub\Petsandsuitss\images\grouppic.png">
+      <h2 class="mb-4">
+        Jumbotron with background image
+      </h2>
+      <p class="mb-4">
+        Hey, check this out.
+      </p>
+      
+    </div>
   </div>
-</div>
 
 
 
@@ -75,24 +88,24 @@
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Cad</h5>
+      <p class="card-text">Product 1</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">Dawg</h5>
+      <p class="card-text">Product 2</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Bunni</h5>
+      <p class="card-text">Product 3</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
