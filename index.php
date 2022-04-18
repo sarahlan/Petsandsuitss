@@ -17,6 +17,14 @@
 
 <body>
 
+<form action="upload.php" method="POST" enctype="multipart/form-data" >
+  <input type="file" name="file">
+  <button type="submit" name="submit">UPLOAD</button>
+
+</form>
+
+
+
 <!----------Navbar----------->
     <nav class="navbar navbar-expand-lg" style="background-color:#E8EDC3;">
         <div class="container-fluid">
@@ -69,12 +77,12 @@
 <!------End of Navbar------------------>
 
 <div class="container py-5">
-    <div class="jumbotron text-white jumbotron-image shadow" style="background-image: C:\Users\Sarah.Lancaster\Documents\GitHub\Petsandsuitss\images\grouppic.png">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-color: black">
       <h2 class="mb-4">
         Jumbotron with background image
       </h2>
-      <p class="mb-4">
-        Hey, check this out.
+      <p class="mb-4" style="color: purple">
+    Man's bestfriend just got even better.
       </p>
       
     </div>
