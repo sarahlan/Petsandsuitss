@@ -12,14 +12,21 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/7b6acd16b3.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Documents</title>
   </head>
 
 <body>
 
-    <!----------Navbar----------->
+<form action="upload.php" method="POST" enctype="multipart/form-data" >
+  <input type="file" name="file">
+  <button type="submit" name="submit">UPLOAD</button>
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #E8EDC3;">
+</form>
+
+
+
+<!----------Navbar----------->
+    <nav class="navbar navbar-expand-lg" style="background-color:#E8EDC3;">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -29,10 +36,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Products
+
+<!----------Dropdown----------->
+            <div class= "dropdown">
+              <ul class= "dropdown-arrow-down">
+              <li class="nav-link nav-item-dropdown">
+                <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
+                <span> Products </span>
                 </a>
+                </li>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                   <li><a class="dropdown-item" href="#">Dawg</a></li>
                   <li><a class="dropdown-item" href="#">Cad</a></li>
@@ -40,76 +54,39 @@
                   <li><a class="dropdown-item" href="#">Fizh</a></li>
                   <li><a class="dropdown-item" href="#">Monke</a></li>
                 </ul>
-                <li class="nav-item-2">
-                  <a class="nav-link" href="#">Sign Up</a>
+                </ul>
+                </div>
+
+<!-------------------Sign in-------------->
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-2" href="#">Sign Up!</a>
+                </li>
+
+                  <p class="or"> or </p>
+
+<!------------------Sign up-------------->                  
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-3" href="#">Sign In!</a>
+                  </li>
                 </li>
             </ul>
           </div>
         </div>
       </nav>
 
-<!------End of Navbar-->
+<!------End of Navbar------------------>
 
-
-
-<!-----Carousel------->
-
-<div class="slideshow-container">
-
-  <div class="mySlides fade">
-    <img src="images/grouppic.png" style="width:100%" >
-    <div class="text"></div>
+<div class="container py-5">
+    <div class="jumbotron text-white jumbotron-image shadow" style="background-color: black">
+      <h2 class="mb-4">
+        Jumbotron with background image
+      </h2>
+      <p class="mb-4" style="color: purple">
+    Man's bestfriend just got even better.
+      </p>
+      
+    </div>
   </div>
-  
-  <div class="mySlides fade">
-    <img src="images/robocat.png" style="width:100%">
-  </div>
-  
-  <div class="mySlides fade">
-    <img src="images/BUNNYINTHEPARK.png" style="width:100%">
-  </div>
-  
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-  </div>
-
-  <br>
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-  </div>
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-    </script>
-    
-<!--------End of Carousel------>
 
 
 
@@ -119,28 +96,29 @@
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <h5 class="card-title">Cad</h5>
+      <p class="card-text">Product 1</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <h5 class="card-title">Dawg</h5>
+      <p class="card-text">Product 2</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
   <div class="card">
     <img src="..." class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Bunni</h5>
+      <p class="card-text">Product 3</p>
       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
 </div>
+
 
 <footer class="footer mt-auto py-3 by-dark ">
 <!-- Footer -->
