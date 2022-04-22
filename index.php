@@ -17,11 +17,6 @@
 
 <body>
 
-<form action="upload.php" method="POST" enctype="multipart/form-data" >
-  <input type="file" name="file">
-  <button type="submit" name="submit">UPLOAD</button>
-
-</form>
 
 
 
@@ -61,10 +56,31 @@
                 <li class="nav-item nav-item-sign">
                   <a class="nav-link nav-item-2" href="#">Sign Up!</a>
                 </li>
-
+                
                   <p class="or"> or </p>
 
-<!------------------Sign up-------------->                  
+<!------------------Sign up-------------->        
+
+<div>
+        <?php 
+        if (isset($_SESSION['userId'])) {
+            echo '<form action="includes/logout.inc.php" method="post">
+            <button type="submit" name="logout-submit">Logout</button>
+        </form>';
+        }
+        else { 
+            echo '<form action="includes/login.inc.php" method="post">
+            <input type="text" name="mailuid" placeholder="E-mail/Username">
+            <input type="password" name="pwd" placeholder="Password">
+            <button type="submit" name="login-sumbit">Login</button>
+         </form>
+         <a href="signup.php"> Signup</a>';
+        }
+        ?>
+
+    </div>         
+
+
                 <li class="nav-item nav-item-sign">
                   <a class="nav-link nav-item-3" href="#">Sign In!</a>
                   </li>
@@ -77,7 +93,8 @@
 <!------End of Navbar------------------>
 
 <div class="container py-5">
-    <div class="jumbotron text-white jumbotron-image shadow" style="background-color: black">
+    <div class="jumbotron text-white jumbotron-image shadow">
+      <img src="https://drive.google.com/uc?export=view&id=146TRmqwcFmdOTcynl8wxtsJ_OD43jPZC" class="jumbotron-image">
       <h2 class="mb-4">
         Jumbotron with background image
       </h2>
