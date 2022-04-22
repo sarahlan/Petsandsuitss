@@ -13,9 +13,9 @@
   padding: 10px;
 }
 
-.nav-link 
-.nav-link-2
-.nav-link-3{
+.nav-link,
+.nav-link-2,
+.nav-link-3 {
     color: #250A66;
     font-family: 'Reenie Beanie', cursive;
     font-size: 40px;
@@ -23,8 +23,8 @@
     margin-right: 10px;
 }
 
-.nav-link:hover
-.nav-link-2:hover
+.nav-link:hover,
+.nav-link-2:hover,
 .nav-link-3:hover{
     color:#9AC2C5;
     color:rgb(105, 114, 187);
@@ -38,17 +38,15 @@
   margin-right: 10px;
 }
 
-.dropdown-toggler {  
+.dropdown {  
   padding: 10px;
   color: #250A66;
 }
 
-#navbarNavDropdown {
-  display:inline-block;
+.nav-item-dropdown {
+  size: 20px;
 }
-#arrow-down ~ span {
-  display:inline-block;
-}
+
 
 /*------End of Navbar-------*/
 

@@ -26,19 +26,21 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="aboutt.php">About</a>
               </li>
 
 <!----------Dropdown----------->
             <div class= "dropdown">
-              <ul class= "dropdown-arrow-down">
+              <ul>
               <li class="nav-link nav-item-dropdown">
                 <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" 
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-arrow-down" id="arrow-down"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+              </svg>
                 <span> Products </span>
                 </a>
                 </li>
@@ -54,35 +56,16 @@
 
 <!-------------------Sign in-------------->
                 <li class="nav-item nav-item-sign">
-                  <a class="nav-link nav-item-2" href="#">Sign Up!</a>
+                  <a class="nav-link nav-item-2" href="signup.php">Sign Up!</a>
                 </li>
                 
                   <p class="or"> or </p>
 
 <!------------------Sign up-------------->        
 
-<div>
-        <?php 
-        if (isset($_SESSION['userId'])) {
-            echo '<form action="includes/logout.inc.php" method="post">
-            <button type="submit" name="logout-submit">Logout</button>
-        </form>';
-        }
-        else { 
-            echo '<form action="includes/login.inc.php" method="post">
-            <input type="text" name="mailuid" placeholder="E-mail/Username">
-            <input type="password" name="pwd" placeholder="Password">
-            <button type="submit" name="login-sumbit">Login</button>
-         </form>
-         <a href="signup.php"> Signup</a>';
-        }
-        ?>
-
-    </div>         
-
 
                 <li class="nav-item nav-item-sign">
-                  <a class="nav-link nav-item-3" href="#">Sign In!</a>
+                  <a class="nav-link nav-item-3" href="signin.php">Sign In!</a>
                   </li>
                 </li>
             </ul>
