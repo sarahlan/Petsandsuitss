@@ -94,7 +94,7 @@
 
 <div class="card-group">
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="https://drive.google.com/uc?export=view&id=1JIjyW4n4r00JHV7tvhfjg4tShL_pOOfC" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Cad</h5>
       <p class="card-text">Product 1</p>
@@ -110,7 +110,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="https://drive.google.com/uc?export=view&id=1dxk2yb4p1Htrk1RKWaeojcEBaBzabIqh" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Bunni</h5>
       <p class="card-text">Product 3</p>

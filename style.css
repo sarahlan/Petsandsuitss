@@ -3,10 +3,19 @@
 
 .navbar-nav{
   padding: 10px;
+  padding-left: 50px;
+  display:inline-block;
+  text-align: center;
 }
 
 .nav-item {
   padding: 10px;
+  display:inline-block;
+
+}
+.dropdown {  
+  padding: 10px;
+  color: #250A66;
 }
 
 .nav-item-sign{
@@ -38,14 +47,9 @@
   margin-right: 10px;
 }
 
-.dropdown {  
-  padding: 10px;
-  color: #250A66;
-}
 
-.nav-item-dropdown {
-  size: 20px;
-}
+
+
 
 
 /*------End of Navbar-------*/
