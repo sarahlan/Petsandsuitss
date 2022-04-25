@@ -16,8 +16,31 @@
   </head>
 
   <body>
+  <p class="goodjob"> Good Job! You are officially signed up! Now, we would like to know a little bit more about your pet! </p>
 
+  <div class="container">
+    <div>Selected From Array</div>
+    <div>Selected from DB Record</div>
+    <div>
 
-  <p class="goodjob"> Good Job! You are officially signed up! Now, we would like to know a little bit more about your pet. </p>
+    <?php
+    $selected = "Small";
+    $options = array('Small', 'Medium', 'Large');
+
+    echo "<select>";
+    foreach($options as $option){
+      if ($selected == $option) {
+        echo "<option selected='selected' value='$option'>$option</option>";
+}
+else {
+  echo "<option value='$option'>$option</option>";
+}
+    }
+    echo "</select>";
+    
+    
+    ?>
+    </div>
+  </div>
   </body>
 </html>
