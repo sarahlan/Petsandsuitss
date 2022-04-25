@@ -79,7 +79,7 @@ else {
 
     mysqli_stmt_bind_param($stmt, "sss", $username, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
-    header("Location: ../signup.php?signup=success");
+    header("Location: ../petquiz.php?signup=success");
 exit();
 }
 
@@ -93,6 +93,6 @@ mysqli_close($conn);
 }
 
 else {
-    header("Location: ../signup.php");
+    header("Location: ../petquiz.php");
 exit();
 }

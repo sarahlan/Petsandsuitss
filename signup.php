@@ -28,15 +28,18 @@ require "header.php";
                     echo '<p class= "signuperror"> Username is already taken!</p>';
                 }            
             }
-
+            else if ($_GET['signup'] == "success") {
+                echo '<p class= "signupsuccess">Sign up successful!</p>';
+            }  
             ?>
 
             <form class="form-signup" action="includes/signup.inc.php" method="post">
-                <input type="text" class="signup-user" name="uid" placeholder="Username">
+                <input type="text" name="uid" placeholder="Username">
                 <input type="text" name="mail" placeholder="E-mail">
                 <input type="password" name="pwd" placeholder="Password">
                 <input type="password" name="pwd-repeat" placeholder="Repeat password">
-                <button type="submit" name="signup-submit">Signup!</button>
+                <button type="submit" name="signup-submit">Sign up!</button>
+                
             </form>
         </div>
         </section>

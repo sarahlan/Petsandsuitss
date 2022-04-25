@@ -31,7 +31,7 @@
             echo '<form action="includes/login.inc.php" method="post">
             <input type="text" name="mailuid" placeholder="E-mail/Username">
             <input type="password" name="pwd" placeholder="Password">
-            <button type="submit" name="login-sumbit">Login</button>
+            <button type="submit" name="login-sumbit"> Sign in!</button>
          </form>';
         }
         ?>
