@@ -102,7 +102,7 @@
     </div>
   </div>
   <div class="card">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="https://drive.google.com/uc?export=view&id=1dTT_FllHzOPiT0vWjr4eK14fO4Vy806t" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">Dawg</h5>
       <p class="card-text">Product 2</p>

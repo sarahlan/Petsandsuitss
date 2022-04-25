@@ -18,7 +18,9 @@
 <body>
 
 
-<div>
+<div class="wrapper-main">
+        <section class="section-default">
+            <h1>Sign In !</h1>
         <?php 
         if (isset($_SESSION['userId'])) {
             echo '<form action="includes/logout.inc.php" method="post">
@@ -30,7 +32,7 @@
             <input type="text" name="mailuid" placeholder="E-mail/Username">
             <input type="password" name="pwd" placeholder="Password">
             <button type="submit" name="login-sumbit">Login</button>
-         </form>
+         </form>';
         }
         ?>
 
