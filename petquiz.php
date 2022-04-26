@@ -43,7 +43,8 @@ if($link === false) {
 if(isset($_GET['size'])) {
   $sizeName = $_GET['size'];
 
-$sql = "SELECT * FROM size WHERE sizeId = 2";
+
+$sql = "SELECT * FROM size WHERE sizeId = 1, 2, 3";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
@@ -62,7 +63,7 @@ else {
 
 
 
-$options = array('Small', 'Medium', 'Large');
+$options = array('', 'Small', 'Medium', 'Large');
 
     echo "<select>";
     foreach($options as $option){
@@ -118,7 +119,7 @@ else {
 
 
 
-$options = array('Short', 'Medium', 'Long');
+$options = array('', 'Short', 'Medium', 'Long', 'Scales');
 
     echo "<select>";
     foreach($options as $option){
@@ -171,7 +172,7 @@ else {
 
 
 
-$options = array('Dawg', 'Cad', 'Bunni', 'Fizh', 'Monkee');
+$options = array('', 'Dawg', 'Cad', 'Bunni', 'Fizh', 'Monkee');
 
     echo "<select>";
     foreach($options as $option){
@@ -226,7 +227,7 @@ else {
 
 
 
-$options = array('3', '6', '9', '12', '15');
+$options = array('', '3', '6', '9', '12', '15');
 
     echo "<select>";
     foreach($options as $option){
@@ -243,8 +244,10 @@ else {
 </div>
 </div>
 
+<form>
 
-
+<input type="submit">
+  </form>
 
 
 </body>
