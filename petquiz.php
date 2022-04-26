@@ -19,10 +19,13 @@
   <body>
   <p class="goodjob"> Good Job! You are officially signed up! Now, we would like to know a little bit more about your pet! </p>
 
+
+<!----Question 1----->
+
+
   <div class="container">
     <div>What size is your pet?</div>
-    <div>
-
+<div>
 
 <?php
 
@@ -73,10 +76,176 @@ else {
     echo "</select>";
 
 ?>
- 
+</div>
+</div>
 
+
+<!----Question 2----->
+
+
+<div class="container">
+    <div>What fur type does your pet have?</div>
+<div>
+
+<?php
+
+
+
+$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
+if($link === false) {
+  die("Error: Could not connect." . mysqli_connect_error());
+}
+
+if(isset($_GET['fur'])) {
+  $sizeName = $_GET['fur'];
+
+$sql = "SELECT * FROM fur WHERE furId = 2";
+if($result = mysqli_query($link, $sql)) {
+if(mysqli_num_rows($result) > 0) {
+  while($row = mysqli_fetch_array($result)){
+    $dbselected = $row['fur'];
+}
+mysqli_free_result($result);
+}
+else {
+  echo "Something went wrong...";
+}
+}
+else {
+  echo "ERROR: Could not execute $sql." . mysql_error($link);
+}
+}
+
+
+
+$options = array('Short', 'Medium', 'Long');
+
+    echo "<select>";
+    foreach($options as $option){
+      if ($dbselected == $option) {
+        echo "<option selected='selected' value='$option'>$option</option>";
+}
+else {
+  echo "<option value='$option'>$option</option>";
+}
+    }
+    echo "</select>";
+
+?>
 </div>
 </div>
+
+<!----- Question 3----->
+
+<div class="container">
+    <div>What is your pet's species?</div>
+<div>
+
+<?php
+
+
+$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
+if($link === false) {
+  die("Error: Could not connect." . mysqli_connect_error());
+}
+
+if(isset($_GET['species'])) {
+  $sizeName = $_GET['species'];
+
+$sql = "SELECT * FROM species WHERE speciesId = 2";
+if($result = mysqli_query($link, $sql)) {
+if(mysqli_num_rows($result) > 0) {
+  while($row = mysqli_fetch_array($result)){
+    $dbselected = $row['species'];
+}
+mysqli_free_result($result);
+}
+else {
+  echo "Something went wrong...";
+}
+}
+else {
+  echo "ERROR: Could not execute $sql." . mysql_error($link);
+}
+}
+
+
+
+$options = array('Dawg', 'Cad', 'Bunni', 'Fizh', 'Monkee');
+
+    echo "<select>";
+    foreach($options as $option){
+      if ($dbselected == $option) {
+        echo "<option selected='selected' value='$option'>$option</option>";
+}
+else {
+  echo "<option value='$option'>$option</option>";
+}
+    }
+    echo "</select>";
+
+?>
+</div>
+</div>
+
+
+
+<!----- Question 4----->
+
+<div class="container">
+    <div>What is your pet's age?</div>
+<div>
+
+<?php
+
+
+$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
+if($link === false) {
+  die("Error: Could not connect." . mysqli_connect_error());
+}
+
+if(isset($_GET['age'])) {
+  $sizeName = $_GET['age'];
+
+$sql = "SELECT * FROM age WHERE ageId = 2";
+if($result = mysqli_query($link, $sql)) {
+if(mysqli_num_rows($result) > 0) {
+  while($row = mysqli_fetch_array($result)){
+    $dbselected = $row['age'];
+}
+mysqli_free_result($result);
+}
+else {
+  echo "Something went wrong...";
+}
+}
+else {
+  echo "ERROR: Could not execute $sql." . mysql_error($link);
+}
+}
+
+
+
+$options = array('3', '6', '9', '12', '15');
+
+    echo "<select>";
+    foreach($options as $option){
+      if ($dbselected == $option) {
+        echo "<option selected='selected' value='$option'>$option</option>";
+}
+else {
+  echo "<option value='$option'>$option</option>";
+}
+    }
+    echo "</select>";
+
+?>
+</div>
+</div>
+
+
+
+
 
 </body>
 </html>
