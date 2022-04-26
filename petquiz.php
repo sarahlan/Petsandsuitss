@@ -73,14 +73,7 @@ else {
     echo "</select>";
 
 ?>
- <form class="form-petquiz" action="petquiz.php" method="post">
-                <input type="varchar" name="sizeId" placeholder="Size">
-<button type="submit" name="submit-q">Submit!</button>
-
-
-<?php
-header("Location: ../petquiz.php");
-?>
+ 
 
 </div>
 </div>
