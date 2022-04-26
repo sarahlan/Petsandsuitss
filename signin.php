@@ -27,6 +27,9 @@
             <button type="submit" name="logout-submit">Logout</button>
         </form>';
         }
+        else if ($_GET['login'] == "success") {
+            echo '<p class= "loginsuccess"> Hello $userId </p>';
+        }  
         else { 
             echo '<form action="includes/login.inc.php" method="post">
             <input type="text" name="mailuid" placeholder="E-mail/Username">
