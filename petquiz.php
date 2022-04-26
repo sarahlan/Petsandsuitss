@@ -20,28 +20,9 @@
   <p class="goodjob"> Good Job! You are officially signed up! Now, we would like to know a little bit more about your pet! </p>
 
   <div class="container">
-    <div>Selected From Array</div>
-    <div>Selected from DB Record</div>
+    <div>What size is your pet?</div>
     <div>
 
-    <?php
-    $selected = "Small";
-    $options = array('Small', 'Medium', 'Large');
-
-    echo "<select>";
-    foreach($options as $option){
-      if ($selected == $option) {
-        echo "<option selected='selected' value='$option'>$option</option>";
-}
-else {
-  echo "<option value='$option'>$option</option>";
-}
-    }
-    echo "</select>";
-    
-  ?>
-</div>
-<div>
 
 <?php
 
@@ -56,19 +37,33 @@ if($link === false) {
   die("Error: Could not connect." . mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM size";
+if(isset($_GET['size'])) {
+  $sizeName = $_GET['size'];
+
+$sql = "SELECT * FROM size WHERE sizeId = 2";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
-  }
+    $dbselected = $row['size'];
+}
+mysqli_free_result($result);
+}
+else {
+  echo "Something went wrong...";
 }
 }
+else {
+  echo "ERROR: Could not execute $sql." . mysql_error($link);
+}
+}
+
+
 
 $options = array('Small', 'Medium', 'Large');
 
     echo "<select>";
     foreach($options as $option){
-      if ($selected == $option) {
+      if ($dbselected == $option) {
         echo "<option selected='selected' value='$option'>$option</option>";
 }
 else {
@@ -78,6 +73,15 @@ else {
     echo "</select>";
 
 ?>
+ <form class="form-petquiz" action="petquiz.php" method="post">
+                <input type="varchar" name="sizeId" placeholder="Size">
+<button type="submit" name="submit-q">Submit!</button>
+
+
+<?php
+header("Location: ../petquiz.php");
+?>
+
 </div>
 </div>
 
