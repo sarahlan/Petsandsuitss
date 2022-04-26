@@ -15,6 +15,7 @@
     <title>Documents</title>
   </head>
 
+  <html>
   <body>
   <p class="goodjob"> Good Job! You are officially signed up! Now, we would like to know a little bit more about your pet! </p>
 
@@ -38,9 +39,47 @@ else {
     }
     echo "</select>";
     
-    
-    ?>
-    </div>
-  </div>
-  </body>
+  ?>
+</div>
+<div>
+
+<?php
+
+define('servername', 'localhost:3306');
+define('dBUsername', 'mahs_cakepopwomen');
+define('dBPassword', 'mustangs');
+define('dBName', 'mahs_cakepopwomen');
+
+
+$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
+if($link === false) {
+  die("Error: Could not connect." . mysqli_connect_error());
+}
+
+$sql = "SELECT * FROM size";
+if($result = mysqli_query($link, $sql)) {
+if(mysqli_num_rows($result) > 0) {
+  while($row = mysqli_fetch_array($result)){
+  }
+}
+}
+
+$options = array('Small', 'Medium', 'Large');
+
+    echo "<select>";
+    foreach($options as $option){
+      if ($selected == $option) {
+        echo "<option selected='selected' value='$option'>$option</option>";
+}
+else {
+  echo "<option value='$option'>$option</option>";
+}
+    }
+    echo "</select>";
+
+?>
+</div>
+</div>
+
+</body>
 </html>
