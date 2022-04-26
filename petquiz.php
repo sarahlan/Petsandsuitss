@@ -29,19 +29,23 @@
 
 <?php
 
-define('servername', 'localhost:3306');
-define('dBUsername', 'mahs_cakepopwomen');
-define('dBPassword', 'mustangs');
-define('dBName', 'mahs_cakepopwomen');
+if (isset($_POST['quiz-submit'])) {
+
+  require 'dbh.inc.php';
+  
+  $size = $_POST['size'];
+  $fur = $_POST['fur'];
+  $species = $_POST['species'];
+  $age = $_POST['age'];
+?>
 
 
-$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
-if($link === false) {
-  die("Error: Could not connect." . mysqli_connect_error());
-}
+
+
+<?php 
 
 if(isset($_GET['size'])) {
-  $sizeName = $_GET['size'];
+  $size = $_GET['size'];
 
 
 $sql = "SELECT * FROM size WHERE sizeId = 1, 2, 3";
@@ -61,17 +65,15 @@ else {
 }
 }
 
-
-
 $options = array('', 'Small', 'Medium', 'Large');
 
     echo "<select>";
-    foreach($options as $option){
-      if ($dbselected == $option) {
-        echo "<option selected='selected' value='$option'>$option</option>";
+    foreach($options as $size){
+      if ($dbselected == $size) {
+        echo "<option selected='selected' value='$size'>$size</option>";
 }
 else {
-  echo "<option value='$option'>$option</option>";
+  echo "<option value='$size'>$size</option>";
 }
     }
     echo "</select>";
@@ -81,7 +83,11 @@ else {
 </div>
 
 
+
+
 <!----Question 2----->
+
+
 
 
 <div class="container">
@@ -90,15 +96,8 @@ else {
 
 <?php
 
-
-
-$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
-if($link === false) {
-  die("Error: Could not connect." . mysqli_connect_error());
-}
-
 if(isset($_GET['fur'])) {
-  $sizeName = $_GET['fur'];
+  $fur = $_GET['fur'];
 
 $sql = "SELECT * FROM fur WHERE furId = 2";
 if($result = mysqli_query($link, $sql)) {
@@ -118,23 +117,28 @@ else {
 }
 
 
-
 $options = array('', 'Short', 'Medium', 'Long', 'Scales');
 
     echo "<select>";
-    foreach($options as $option){
-      if ($dbselected == $option) {
-        echo "<option selected='selected' value='$option'>$option</option>";
+    foreach($options as $fur){
+      if ($dbselected == $fur) {
+        echo "<option selected='selected' value='$fur'>$fur</option>";
 }
 else {
-  echo "<option value='$option'>$option</option>";
+  echo "<option value='$fur'>$fur</option>";
 }
     }
     echo "</select>";
 
 ?>
+
+
 </div>
 </div>
+
+
+
+
 
 <!----- Question 3----->
 
@@ -145,13 +149,8 @@ else {
 <?php
 
 
-$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
-if($link === false) {
-  die("Error: Could not connect." . mysqli_connect_error());
-}
-
 if(isset($_GET['species'])) {
-  $sizeName = $_GET['species'];
+  $species = $_GET['species'];
 
 $sql = "SELECT * FROM species WHERE speciesId = 2";
 if($result = mysqli_query($link, $sql)) {
@@ -170,17 +169,15 @@ else {
 }
 }
 
-
-
 $options = array('', 'Dawg', 'Cad', 'Bunni', 'Fizh', 'Monkee');
 
     echo "<select>";
-    foreach($options as $option){
-      if ($dbselected == $option) {
-        echo "<option selected='selected' value='$option'>$option</option>";
+    foreach($options as $species){
+      if ($dbselected == $species) {
+        echo "<option selected='selected' value='$species'>$species</option>";
 }
 else {
-  echo "<option value='$option'>$option</option>";
+  echo "<option value='$species'>$species</option>";
 }
     }
     echo "</select>";
@@ -188,6 +185,9 @@ else {
 ?>
 </div>
 </div>
+
+
+
 
 
 
@@ -199,14 +199,8 @@ else {
 
 <?php
 
-
-$link = mysqli_connect(servername, dBUsername, dBPassword, dBName);
-if($link === false) {
-  die("Error: Could not connect." . mysqli_connect_error());
-}
-
 if(isset($_GET['age'])) {
-  $sizeName = $_GET['age'];
+  $age = $_GET['age'];
 
 $sql = "SELECT * FROM age WHERE ageId = 2";
 if($result = mysqli_query($link, $sql)) {
@@ -225,29 +219,40 @@ else {
 }
 }
 
-
-
 $options = array('', '3', '6', '9', '12', '15');
 
     echo "<select>";
-    foreach($options as $option){
-      if ($dbselected == $option) {
-        echo "<option selected='selected' value='$option'>$option</option>";
+    foreach($options as $age){
+      if ($dbselected == $age) {
+        echo "<option selected='selected' value='$age'>$age</option>";
 }
 else {
-  echo "<option value='$option'>$option</option>";
+  echo "<option value='$age'>$age</option>";
 }
     }
     echo "</select>";
+  }
+
 
 ?>
+
+
+<?php
+$sql = "INSERT INTO Pets (size, fur, species, age) VALUES (?, ?, ?, ?)";
+$stmt = mysqli_stmt_init($conn);
+?>
+
+<form class="form-quiz" action="includes/signup.inc.php" method="post">
+                <input type="text" name="size" placeholder="size">
+                <input type="text" name="fur" placeholder="fur">
+                <input type="text" name="species" placeholder="species">
+                <input type="int" name="age" placeholder="age">
+                <button type="submit" name="quiz-submit"> Submit!</button>
+                
+            </form>
+
 </div>
 </div>
-
-<form>
-
-<input type="submit">
-  </form>
 
 
 </body>

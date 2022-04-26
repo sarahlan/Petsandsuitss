@@ -28,9 +28,6 @@ require "header.php";
                     echo '<p class= "signuperror"> Username is already taken!</p>';
                 }            
             }
-            else if ($_GET['signup'] == "success") {
-                echo '<p class= "signupsuccess">Sign up successful!</p>';
-            }  
             ?>
 
             <form class="form-signup" action="includes/signup.inc.php" method="post">

@@ -23,9 +23,56 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.php">About</a>
+                <a class="nav-link" aria-current="page" href="index.php">Home</a>
               </li>
-    </nav>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutt.php">About</a>
+              </li>
+
+<!----------Dropdown----------->
+            <div class= "dropdown">
+              <ul>
+              <li class="nav-link nav-item-dropdown">
+                <a class="nav-link" href="products.php" id="navbarDropdownMenuLink" role="button" 
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" 
+                viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 
+              0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+              </svg>
+                <span> Products </span>
+                </a>
+                </li>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">Dawg</a></li>
+                  <li><a class="dropdown-item" href="#">Cad</a></li>
+                  <li><a class="dropdown-item" href="#">Bunni</a></li>
+                  <li><a class="dropdown-item" href="#">Fizh</a></li>
+                  <li><a class="dropdown-item" href="#">Monke</a></li>
+                </ul>
+                </ul>
+                </div>
+
+<!-------------------Sign in-------------->
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-2" href="signup.php">Sign Up!</a>
+                </li>
+                
+                  <p class="or"> or </p>
+
+<!------------------Sign up-------------->        
+
+
+                <li class="nav-item nav-item-sign">
+                  <a class="nav-link nav-item-3" href="signin.php">Sign In!</a>
+                  </li>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!------End of Navbar------------------>
     <header class="page-header gradient">
         <div class="container pt-3">
           <div class="row align-items-center justify-content-center">
@@ -56,13 +103,50 @@
       </div>
     </div>
 
-  <img src="..." class="rounded float-start" alt="...">
+ 
+    <img src="..." class="rounded float-start" alt="...">
   <div class="card">
   <div class="card-body">
-    This is some text within a card body.
+  <center>Follow us on our Social Medias!
+@petsandsuitsco</center>
   </div>
 </div>
-<img src="..." class="rounded float-end" alt="...">
+<img src="https://drive.google.com/uc?export=view&id=1JIjyW4n4r00JHV7tvhfjg4tShL_pOOfC" class="rounded float-end" alt="...">
+ 
 
-  </body>
+<footer class="footer mt-auto py-3 by-dark ">
+<!-- Footer -->
+<footer class="text-center text-white" style="background-color: #9AC2C5;">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <!-- Section: Social media -->
+    <section class="mb-4">
+      <!-- Facebook -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-square"></i></a>
+
+      <!-- Twitter -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter-square"></i></a>
+      
+      <!-- Instagram -->
+      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram-square"></i></a>
+       <!-- Linkedin -->
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+       ><i class="fab fa-linkedin-in"></i
+     ></a>
+
+     <!-- Github -->
+     <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+       ><i class="fab fa-github"></i
+     ></a>
+   </section>
+   <!-- Section: Social media -->
+  </footer>
+  <!-- Footer -->
+</footer>
+
+
+</body>
 </html>

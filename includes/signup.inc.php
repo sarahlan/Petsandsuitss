@@ -15,8 +15,6 @@
 
 <body>
     
-</body>
-</html> 
 
 
 
@@ -96,3 +94,8 @@ else {
     header("Location: ../petquiz.php");
 exit();
 }
+
+?>
+
+</body>
+</html> 
