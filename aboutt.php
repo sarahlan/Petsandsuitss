@@ -66,14 +66,3 @@
 
   </body>
 </html>
-
-  <img src="..." class="rounded float-start" alt="...">
-  <div class="card">
-  <div class="card-body">
-    This is some text within a card body.
-  </div>
-</div>
-<img src="..." class="rounded float-end" alt="...">
-
-  </body>
-</html>
