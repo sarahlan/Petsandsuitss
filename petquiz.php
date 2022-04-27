@@ -22,18 +22,17 @@
 
 <!----Question 1----->
 
-
-  <div class="container">
-    <div>What size is your pet?</div>
-<div>
-
 <?php
 
-if (isset($_POST['quiz-submit'])) {
+require 'dbh.inc.php';
 
-  require 'dbh.inc.php';
+if (isset($_POST['quiz-submit'])) {   
+
+    $sql = "INSERT INTO Pets (size, fur, species, age) VALUES (?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+}
   
-  $size = $_POST['size'];
+  $size  = $_POST['size'];
   $fur = $_POST['fur'];
   $species = $_POST['species'];
   $age = $_POST['age'];
@@ -41,6 +40,9 @@ if (isset($_POST['quiz-submit'])) {
 
 
 
+  <div class="container">
+    <div>What size is your pet?</div>
+<div>
 
 <?php 
 
@@ -48,7 +50,7 @@ if(isset($_GET['size'])) {
   $size = $_GET['size'];
 
 
-$sql = "SELECT * FROM size WHERE sizeId = 1, 2, 3";
+$sql = "SELECT * FROM size WHERE sizeId = 1, 2, 3, 4";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
@@ -99,7 +101,7 @@ else {
 if(isset($_GET['fur'])) {
   $fur = $_GET['fur'];
 
-$sql = "SELECT * FROM fur WHERE furId = 2";
+$sql = "SELECT * FROM fur WHERE furId = 1, 2, 3, 4";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
@@ -152,7 +154,7 @@ else {
 if(isset($_GET['species'])) {
   $species = $_GET['species'];
 
-$sql = "SELECT * FROM species WHERE speciesId = 2";
+$sql = "SELECT * FROM species WHERE speciesId = 1, 2, 3, 4, 5";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
@@ -202,7 +204,7 @@ else {
 if(isset($_GET['age'])) {
   $age = $_GET['age'];
 
-$sql = "SELECT * FROM age WHERE ageId = 2";
+$sql = "SELECT * FROM age WHERE ageId = 1, 2, 3, 4, 5";
 if($result = mysqli_query($link, $sql)) {
 if(mysqli_num_rows($result) > 0) {
   while($row = mysqli_fetch_array($result)){
@@ -231,25 +233,18 @@ else {
 }
     }
     echo "</select>";
-  }
+  
 
 
 ?>
 
+<form>
+  <option value="Small"></option>
+  <option value="Medium"></option>
+  <option value="Large"></option>
+</form>
 
-<?php
-$sql = "INSERT INTO Pets (size, fur, species, age) VALUES (?, ?, ?, ?)";
-$stmt = mysqli_stmt_init($conn);
-?>
 
-<form class="form-quiz" action="includes/signup.inc.php" method="post">
-                <input type="text" name="size" placeholder="size">
-                <input type="text" name="fur" placeholder="fur">
-                <input type="text" name="species" placeholder="species">
-                <input type="int" name="age" placeholder="age">
-                <button type="submit" name="quiz-submit"> Submit!</button>
-                
-            </form>
 
 </div>
 </div>
